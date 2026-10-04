@@ -32,7 +32,7 @@ function seo(siteUrl: string): Plugin {
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), 'VITE_')
   return {
-    plugins: [react(), seo(env.VITE_SITE_URL ?? '')],
+    plugins: [react(), seo(env.VITE_SITE_URL || 'https://rishavbhusal.com.np')],
     build: {
       target: 'es2022',
     },
