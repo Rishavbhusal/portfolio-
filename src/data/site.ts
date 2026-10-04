@@ -12,7 +12,7 @@ export const site = {
   linkedin: 'https://www.linkedin.com/in/rishav-bhusal-b0854a287',
   github: env.VITE_GITHUB_URL?.trim() || 'https://github.com/Rishavbhusal',
   location: 'Rupandehi, Nepal',
-  url: env.VITE_SITE_URL?.trim() || undefined,
+  url: env.VITE_SITE_URL?.trim() || 'https://rishavbhusal.com.np',
 } as const
 
 export const education = {
