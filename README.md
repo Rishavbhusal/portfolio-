@@ -1,43 +1,26 @@
 # Rishav Bhusal — Portfolio
 
-React + TypeScript + Vite, with one persistent Three.js / React Three Fiber world behind semantic HTML.
-Anime.js choreographs typography and UI; StringTune provides smooth scroll, parallax and magnetic buttons.
+Portfolio of Rishav Bhusal, a backend and blockchain developer working with Node.js, Solana and Web3.
 
-```bash
-npm install
-npm run dev        # http://localhost:5173
-npm run build      # typecheck + production build -> dist/
-npm run preview
-```
+Built with React, TypeScript and Three.js. The 3D background is a procedural node network that changes with each project.
 
-## Content is data
+![Hero](screenshots/hero.png)
 
-All facts come from the CV (`cv/`) and live in `src/data/`:
+## Projects
 
-| File | Contents |
+| Verix | TapGuard Vault |
 | --- | --- |
-| `site.ts` | name, role, email, LinkedIn, education |
-| `projects.ts` | the four projects (stack, details, achievement, optional `github` / `demo`) |
-| `skills.ts` | grouped skills and which project shipped them |
-| `achievements.ts` | verified achievements |
+| ![Verix](screenshots/verix.png) | ![TapGuard Vault](screenshots/tapguard.png) |
 
-Nothing is invented: if a field is missing it is simply not rendered.
+| Swiflo | Engineering stack |
+| --- | --- |
+| ![Swiflo](screenshots/swiflo.png) | ![Stack](screenshots/stack.png) |
 
-## Things the CV did not contain (left configurable, not guessed)
+## Built with
 
-Copy `.env.example` to `.env` and fill in when verified:
+React · TypeScript · Vite · Three.js · React Three Fiber · Anime.js · StringTune
 
-- `VITE_SITE_URL` — the `.com.np` hostname (e.g. `https://yourname.com.np`). When set, the build emits
-  canonical / `og:url` / `og:image`, `sitemap.xml` and a `Sitemap:` line in `robots.txt`.
-- `VITE_GITHUB_URL` — shows GitHub buttons in the hero, contact section and project index.
-- Per-project `github` / `demo` URLs in `src/data/projects.ts` — show CODE / LIVE buttons only when present.
+## Links
 
-## Architecture
-
-- `src/lib/store.ts` — mutable frame state (scroll, pointer, section weights). No React state per frame.
-- `src/lib/scrollDriver.ts` — maps scroll to formation A→B, project progress and the contact shutdown.
-- `src/webgl/` — one canvas: `formations.ts` (procedural node layouts), `Network.tsx` (nodes, edges, packets,
-  lead packet; custom GLSL in `shaders.ts`), `Gate.tsx` (TapGuard verification), `cameraRig.ts`.
-- `src/animation/` — StringTune setup and Anime.js reveals.
-- WebGL is progressive enhancement: lazy-loaded, error-bounded, and the site is fully usable without it.
-  `prefers-reduced-motion` disables smooth scroll, camera travel, scatter and most packets.
+- GitHub: https://github.com/Rishavbhusal
+- LinkedIn: https://www.linkedin.com/in/rishav-bhusal-b0854a287
